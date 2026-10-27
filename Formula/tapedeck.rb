@@ -16,7 +16,7 @@ class Tapedeck < Formula
     libexec.install "tapedeck.py", "web"
     (bin/"tapedeck").write <<~SH
       #!/bin/bash
-      exec "#{Formula["python@3.14"].opt_bin}/python3.14" "#{libexec}/tapedeck.py" "$@"
+      exec "#{formula_opt_bin("python@3.14")}/python3.14" "#{libexec}/tapedeck.py" "$@"
     SH
   end
 
